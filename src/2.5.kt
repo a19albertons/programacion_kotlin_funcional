@@ -3,20 +3,12 @@
 //data class partidos(val local:String, val visitante:String, val marcadorLocal: Int, val marcadorVisitante: Int){
 //
 //}
-//fun contenido(fichero: File): List<partidos>{
-//    val contenido = fichero.readLines()
-//    val devolver = mutableListOf<partidos>()
-//    for (i in contenido) {
-//        val lista = i.split(",")
-//        devolver.add(partidos(lista[0],lista[1],lista[2].toInt(),lista[3].toInt()))
-//    }
-//    return devolver
-//}
-//
 //
 //fun main() {
 //    val fichero = File("partidos.txt")
-//    val resultados = contenido(fichero)
+//    val lineas = fichero.readLines()
+//    val resultados = lineas.map { lineas -> val (local, visitante, marcadorLocal, marcadorVisitante) = lineas.split(",")
+//        partidos (local,visitante, marcadorLocal.toInt(), marcadorVisitante.toInt())}
 ////    println(resultados)
 //    println("***Todos los partidos con más de 3 goles***")
 //    resultados.filter { it.marcadorLocal+it.marcadorVisitante > 3 }.forEach { println(it.local+" vs "+it.visitante+": "+it.marcadorLocal+" - "+it.marcadorVisitante) }
