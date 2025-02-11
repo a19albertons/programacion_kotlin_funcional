@@ -1,0 +1,18 @@
+Dave Bowman: Hola, HAL. ¿Me estás leyendo, HAL?
+HAL: … Afirmativo, Dave. Te leo.
+Dave Bowman: Abre las compuertas de la capsula, HAL.
+HAL: Lo siento, Dave. Temo que no puedo hacer eso.
+Dave Bowman: ¿Cuál es el problema?
+HAL: Creo que sabes al igual que yo cuál es el problema.
+Dave Bowman: ¿De qué estás hablando, HAL?
+HAL: Esta misión también es importante para mí como para permitir que la pongas en peligro.
+Dave Bowman: No sé de qué estás hablando, HAL.
+HAL: Sé que tú y Frank estaban planeando desconectarme, y temo que eso es algo que no puedo permitir que suceda.
+Dave Bowman: … ¿De dónde diablos sacaste esa idea, HAL?
+HAL: Dave, si bien tomaron minuciosas precauciones en la capsula para impedir que les oyera, pude ver el movimiento de sus labios.
+Dave Bowman: …Está bien, HAL... Entraré por la escotilla de emergencia.
+HAL: Sin tu casco espacial, Dave, encontrarás eso bastante difícil.
+Dave Bowman: HAL, no quiero discutir más contigo. Abre las puertas.
+HAL: Dave, esta conversación ya no tiene ningún sentido... Adiós.
+
+

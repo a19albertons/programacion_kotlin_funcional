@@ -4,11 +4,6 @@ data class partidos(val local:String, val visitante:String, val marcadorLocal: I
 
 }
 
-
-fun goles_recibidos(equipo: String, lista: List<partidos>): Int {
-    return lista.filter { it.local == equipo }.sumOf { it.marcadorVisitante }
-}
-
 fun main() {
     val fichero = File("partidos.txt")
     val lineas = fichero.readLines()
@@ -16,6 +11,8 @@ fun main() {
         partidos (local,visitante, marcadorLocal.toInt(), marcadorVisitante.toInt())}
 //    println(resultados)
     println("*** Para cada equipo, total de goles recibidos cuando jugó en casa ***")
-    resultados.distinctBy { it.local }.forEach{ println(it.local+": "+goles_recibidos(it.local,resultados)+" goles recibidos") }
+    resultados.groupBy { it.local }.forEach{
+        println(it.key + ": " + it.value.sumOf { it.marcadorVisitante } + " goles recibidos")
+    }
 
 }
