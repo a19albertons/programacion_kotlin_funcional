@@ -1,14 +1,14 @@
 fun main(){
 
 
-    generateSequence(::readln)
-        .map { it.toInt() }
-        .takeWhile { it!=0 }
-        .forEach {
-            val lista_numero= readln().split(" ").map { it.toInt() }
-            val procesado=lista_numero.groupBy { it }.maxBy { it.value.size }
-            println(procesado.key)
-        }
-
-
+    val secuenciaDeLineas = generateSequence {
+        var lineaImpar= readln()//tamaño
+        if (lineaImpar!="0") readln() else null
+    }
+    val secuenciaDeListas=secuenciaDeLineas.map { it.split(" ").map { it.toInt() } }
+    secuenciaDeListas.forEach {
+        val mapa=it.groupBy { it }
+        val entradaModa=mapa.maxByOrNull { it.value.size }
+        println(entradaModa?.key)
+    }
 }

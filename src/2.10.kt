@@ -1,17 +1,28 @@
 import java.io.File
 // funciones de consulta
-val fichero=File("2001.txt")
-val leer=fichero.readLines()
 fun consulta1() {
-    leer.map { it }.filter { it.length>0 }.last().let { println(it) }
+    val fichero=File("2001.txt")
+    val leer=fichero.bufferedReader()
+    val ultimaLinea = leer.lineSequence().filter { it.isNotBlank() }.last()
+    println(ultimaLinea)
+    leer.close()
+
 }
 fun consulta2() {
-    leer.map { it }.filter { it.contains("HAL") && it.length < 40 }.forEach{
-        println(it)
-    }
+    val fichero=File("2001.txt")
+    val leer=fichero.bufferedReader()
+    leer.lineSequence().
+    filter { it.contains("HAL") && it.length < 40 }.
+    forEach{ println(it) }
+    leer.close()
 }
 fun consulta3() {
-    leer.map {it}.filter { it.contains("Dave Bowman:") }.forEach { println(it.replace("HAL","IBM"))}.toString()
+    val fichero=File("2001.txt")
+    val leer=fichero.bufferedReader()
+    leer.lineSequence().
+    filter { it.startsWith("Dave") }.
+    forEach { println(it.replace("HAL","IBM"))}
+    leer.close()
 }
 
 fun main() {
