@@ -1,15 +1,21 @@
+
+
 fun main() {
-    val myHTML = html {
+    val page = html {
         head {
-            title("Mi pagina hecha con MI DSL")
+            title("Página con lista")
         }
         body {
-            h1("texto h1 muy bonito")
-            p("texto párrafo precioso")
+            h1("Lista de elementos")
+            ul {
+                li("Elemento 1")
+                li("Elemento 2")
+                li("Elemento 3")
+            }
         }
     }
 
-    println(myHTML)
+    println(page)
 }
 
 class Head {
@@ -54,7 +60,22 @@ class Body {
     fun h1(text: String) {
         content += "<h1>$text</h1>"
     }
+    // Función que recibe una lambda con receptor UL y retorna el HTML completo
+    fun ul(init: UL.() -> Unit) {
+        val ul = UL().apply(init)
+        content += "<ul>${ul.content}</ul>"
+    }
 }
+class UL {
+    var content = ""
+
+    // Función para agregar un elemento <li>
+    fun li(text: String) {
+        content += "<li>$text</li>"
+    }
+}
+
+
 
 fun html(init: HTML.() -> Unit): HTML {
     val html = HTML() //crea el objeto receptor
